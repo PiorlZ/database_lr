@@ -1,7 +1,7 @@
 import os
 
 import pandas as pd
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine, text, inspect, MetaData
 import time
 
 # Ожидание перед подключением
@@ -32,20 +32,30 @@ csv_file_path = 'categories.csv'  # Убедитесь, что файл сохр
 df = pd.read_csv(csv_file_path, encoding='utf-8')  # Убедитесь, что используется правильная кодировка
 
 # Путь к файлу Excel
-excel_file_path = 'data.xlsx'
+excel_path = 'data.xlsx'
 
-# Загрузка данных из Excel
-xls = pd.ExcelFile(excel_file_path)
+df_data = pd.read_excel(excel_path)
 
-# Проверьте, какие листы доступны
-print("Доступные листы:", xls.sheet_names)
+# Получение метаданных базы данных
+metadata = MetaData()
+metadata.reflect(bind=engine)
 
-# Выберите лист и загрузите данные в DataFrame
-df_excel = pd.read_excel(xls, sheet_name='Sheet1')  # Замените 'Sheet1' на нужный лист
+# Получение списка таблиц и их колонок
+inspector = inspect(engine)
+db_tables = inspector.get_table_names()
+table_columns = {table: [col['name'] for col in inspector.get_columns(table)] for table in db_tables}
 
-# Удаление столбца, если он существует
-if 'Unnamed: 0' in df_excel.columns:
-    df_excel.drop(columns=['Unnamed: 0'], inplace=True)
+# Идентификация совпадающих колонок
+matching_columns = {}
+for table, columns in table_columns.items():
+    matches = set(df_data.columns).intersection(columns)
+    if matches:
+        matching_columns[table] = list(matches)
+
+# Печать найденных совпадений для проверки
+print("Найденные совпадающие колонки:")
+for table, cols in matching_columns.items():
+    print(f"Таблица: {table}, Колонки: {cols}")
 
 
 def get_souvenirs_by_material(material):
@@ -81,7 +91,16 @@ df.to_sql('SouvenirCategories', engine, if_exists='append', index=False)
 
 print("Данные успешно импортированы в базу данных.")
 
-# Импорт данных в базу данных
-df_excel.to_sql('souvenirs', engine, if_exists='append', index=False)
+# Загрузка данных в таблицы
+for table, columns in matching_columns.items():
+    df_filtered = df_data[columns]
 
-print("Данные из Excel успешно импортированы в базу данных.")
+    # Исключение полей, которые не нужно вставлять, например, автоинкрементных id
+    if 'id' in df_filtered.columns:
+        df_filtered = df_filtered.drop(columns=['id'])
+
+    try:
+        df_filtered.to_sql(table, engine, if_exists='append', index=False)
+        print(f"Данные успешно загружены в таблицу {table}")
+    except Exception as e:
+        print(f"Ошибка при загрузке данных в таблицу {table}: {e}")
