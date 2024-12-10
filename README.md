@@ -75,7 +75,7 @@ Contributions are welcome! To contribute:
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ## Contact
 
@@ -163,7 +163,7 @@ pip install -r requirements.txt
 
 ## Лицензия
 
-Этот проект лицензирован под лицензией MIT. Подробности смотрите в файле `LICENSE`.
+Этот проект лицензирован под лицензией MIT. Подробности смотрите в файле [LICENSE](./LICENSE)
 
 ## Контакты
 
