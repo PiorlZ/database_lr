@@ -112,7 +112,7 @@ For any questions or issues, please contact:
 ### 1. Клонируйте репозиторий
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/PiorlZ/database_lr.git
 cd database_lr-main
 ```
 
