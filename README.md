@@ -81,7 +81,7 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 For any questions or issues, please contact:
 
-- **Name:** PiorlZ
+- **Name:** Zakahr
 - **Email:** senqpt@gmail.com
 
 ---
@@ -169,7 +169,7 @@ pip install -r requirements.txt
 
 Для любых вопросов или проблем, свяжитесь с нами:
 
-- **Имя:** PiorlZ
+- **Имя:** Захар
 - **Эл. почта:** senqpt@gmail.com
 
 ---
