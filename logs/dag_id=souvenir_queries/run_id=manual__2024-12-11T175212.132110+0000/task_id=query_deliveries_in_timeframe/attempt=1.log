@@ -1,0 +1,35 @@
+[2024-12-11T17:52:13.218+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: souvenir_queries.query_deliveries_in_timeframe manual__2024-12-11T17:52:12.132110+00:00 [queued]>
+[2024-12-11T17:52:13.237+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: souvenir_queries.query_deliveries_in_timeframe manual__2024-12-11T17:52:12.132110+00:00 [queued]>
+[2024-12-11T17:52:13.238+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-12-11T17:52:13.270+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): query_deliveries_in_timeframe> on 2024-12-11 17:52:12.132110+00:00
+[2024-12-11T17:52:13.285+0000] {standard_task_runner.py:57} INFO - Started process 388 to run task
+[2024-12-11T17:52:13.299+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'souvenir_queries', 'query_deliveries_in_timeframe', 'manual__2024-12-11T17:52:12.132110+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/check_task_querys.py', '--cfg-path', '/tmp/tmp7h34h4xr']
+[2024-12-11T17:52:13.311+0000] {standard_task_runner.py:85} INFO - Job 9: Subtask query_deliveries_in_timeframe
+[2024-12-11T17:52:13.362+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/settings.py:193 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-12-11T17:52:13.467+0000] {task_command.py:416} INFO - Running <TaskInstance: souvenir_queries.query_deliveries_in_timeframe manual__2024-12-11T17:52:12.132110+00:00 [running]> on host 2e1b8d227825
+[2024-12-11T17:52:13.678+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='souvenir_queries' AIRFLOW_CTX_TASK_ID='query_deliveries_in_timeframe' AIRFLOW_CTX_EXECUTION_DATE='2024-12-11T17:52:12.132110+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-11T17:52:12.132110+00:00'
+[2024-12-11T17:52:13.692+0000] {logging_mixin.py:151} INFO - Поставки сувениров за промежуток времени:
+[2024-12-11T17:52:13.693+0000] {logging_mixin.py:151} INFO - (8, datetime.date(2024, 12, 11), 619, Decimal('3'), Decimal('84.37846084941575'))
+[2024-12-11T17:52:13.694+0000] {logging_mixin.py:151} INFO - (6, datetime.date(2024, 12, 11), 667, Decimal('5'), Decimal('37.12361324109585'))
+[2024-12-11T17:52:13.696+0000] {logging_mixin.py:151} INFO - (5, datetime.date(2024, 12, 11), 576, Decimal('3'), Decimal('16.595279117710625'))
+[2024-12-11T17:52:13.697+0000] {logging_mixin.py:151} INFO - (9, datetime.date(2024, 12, 11), 886, Decimal('2'), Decimal('28.21551159672599'))
+[2024-12-11T17:52:13.698+0000] {logging_mixin.py:151} INFO - (2, datetime.date(2024, 12, 11), 1424, Decimal('8'), Decimal('42.07851260152157'))
+[2024-12-11T17:52:13.699+0000] {logging_mixin.py:151} INFO - (4, datetime.date(2024, 12, 11), 987, Decimal('1'), Decimal('47.941974009225284'))
+[2024-12-11T17:52:13.699+0000] {logging_mixin.py:151} INFO - (3, datetime.date(2024, 12, 11), 634, Decimal('7'), Decimal('77.18558468937036'))
+[2024-12-11T17:52:13.700+0000] {logging_mixin.py:151} INFO - (2, datetime.date(2024, 12, 11), 2146, Decimal('4'), Decimal('82.85979056834832'))
+[2024-12-11T17:52:13.701+0000] {logging_mixin.py:151} INFO - (7, datetime.date(2024, 12, 11), 2518, Decimal('9'), Decimal('82.16844458505791'))
+[2024-12-11T17:52:13.701+0000] {logging_mixin.py:151} INFO - (5, datetime.date(2024, 12, 11), 812, Decimal('6'), Decimal('78.40692387215654'))
+[2024-12-11T17:52:13.702+0000] {logging_mixin.py:151} INFO - (5, datetime.date(2024, 12, 11), 1987, Decimal('2'), Decimal('84.64662749988491'))
+[2024-12-11T17:52:13.702+0000] {logging_mixin.py:151} INFO - (10, datetime.date(2024, 12, 11), 1827, Decimal('1'), Decimal('87.22177495134378'))
+[2024-12-11T17:52:13.703+0000] {logging_mixin.py:151} INFO - (6, datetime.date(2024, 12, 11), 1899, Decimal('10'), Decimal('50.19013536828001'))
+[2024-12-11T17:52:13.703+0000] {logging_mixin.py:151} INFO - (4, datetime.date(2024, 12, 11), 1801, Decimal('10'), Decimal('28.243186867227642'))
+[2024-12-11T17:52:13.703+0000] {logging_mixin.py:151} INFO - (6, datetime.date(2024, 12, 11), 2638, Decimal('10'), Decimal('82.77294251613019'))
+[2024-12-11T17:52:13.704+0000] {logging_mixin.py:151} INFO - (10, datetime.date(2024, 12, 11), 1224, Decimal('3'), Decimal('54.90594265352911'))
+[2024-12-11T17:52:13.704+0000] {logging_mixin.py:151} INFO - (2, datetime.date(2024, 12, 11), 350, Decimal('9'), Decimal('65.52556563462969'))
+[2024-12-11T17:52:13.705+0000] {logging_mixin.py:151} INFO - (10, datetime.date(2024, 12, 11), 2369, Decimal('9'), Decimal('86.72637834432705'))
+[2024-12-11T17:52:13.705+0000] {logging_mixin.py:151} INFO - (2, datetime.date(2024, 12, 11), 1840, Decimal('5'), Decimal('94.77898758584473'))
+[2024-12-11T17:52:13.706+0000] {logging_mixin.py:151} INFO - (5, datetime.date(2024, 12, 11), 1388, Decimal('4'), Decimal('80.90810512175167'))
+[2024-12-11T17:52:13.706+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-12-11T17:52:13.730+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=souvenir_queries, task_id=query_deliveries_in_timeframe, execution_date=20241211T175212, start_date=20241211T175213, end_date=20241211T175213
+[2024-12-11T17:52:13.797+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-12-11T17:52:13.863+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,62 @@
+[2024-12-11T17:52:13.190+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: souvenir_queries.query_souvenirs_by_material manual__2024-12-11T17:52:12.132110+00:00 [queued]>
+[2024-12-11T17:52:13.210+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: souvenir_queries.query_souvenirs_by_material manual__2024-12-11T17:52:12.132110+00:00 [queued]>
+[2024-12-11T17:52:13.211+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-12-11T17:52:13.246+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): query_souvenirs_by_material> on 2024-12-11 17:52:12.132110+00:00
+[2024-12-11T17:52:13.257+0000] {standard_task_runner.py:57} INFO - Started process 382 to run task
+[2024-12-11T17:52:13.266+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'souvenir_queries', 'query_souvenirs_by_material', 'manual__2024-12-11T17:52:12.132110+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/check_task_querys.py', '--cfg-path', '/tmp/tmpzlkk5hzb']
+[2024-12-11T17:52:13.275+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask query_souvenirs_by_material
+[2024-12-11T17:52:13.339+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/settings.py:193 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-12-11T17:52:13.448+0000] {task_command.py:416} INFO - Running <TaskInstance: souvenir_queries.query_souvenirs_by_material manual__2024-12-11T17:52:12.132110+00:00 [running]> on host 2e1b8d227825
+[2024-12-11T17:52:13.695+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='souvenir_queries' AIRFLOW_CTX_TASK_ID='query_souvenirs_by_material' AIRFLOW_CTX_EXECUTION_DATE='2024-12-11T17:52:12.132110+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-11T17:52:12.132110+00:00'
+[2024-12-11T17:52:13.712+0000] {logging_mixin.py:151} INFO - Сувениры по материалу:
+[2024-12-11T17:52:13.713+0000] {logging_mixin.py:151} INFO - (1, 'Фонарик Lyra с карабином, синий', 'алюминий')
+[2024-12-11T17:52:13.713+0000] {logging_mixin.py:151} INFO - (7, 'Нож складной Remy, синий классический', 'алюминий')
+[2024-12-11T17:52:13.714+0000] {logging_mixin.py:151} INFO - (84, 'Карабин с брелоком, черный', 'алюминий')
+[2024-12-11T17:52:13.714+0000] {logging_mixin.py:151} INFO - (148, 'Брелок Aria со стилусом, черный', 'алюминий')
+[2024-12-11T17:52:13.715+0000] {logging_mixin.py:151} INFO - (151, 'Портативное зарядное устройство Volt, черный', 'алюминий')
+[2024-12-11T17:52:13.716+0000] {logging_mixin.py:151} INFO - (155, 'Усилитель звука Cenawing', 'алюминий')
+[2024-12-11T17:52:13.716+0000] {logging_mixin.py:151} INFO - (430, 'Фонарь Weyburn 3 Вт, серый/оранжевый', 'алюминий')
+[2024-12-11T17:52:13.718+0000] {logging_mixin.py:151} INFO - (440, 'Колонка Warpt, серебристый', 'алюминий')
+[2024-12-11T17:52:13.719+0000] {logging_mixin.py:151} INFO - (449, 'Портативное зарядное устройство Bolt, 2200 мА/ч, черный', 'алюминий')
+[2024-12-11T17:52:13.719+0000] {logging_mixin.py:151} INFO - (450, 'Портативное зарядное устройство Taylor 2200 мА/ч, ярко-синий', 'алюминий')
+[2024-12-11T17:52:13.719+0000] {logging_mixin.py:151} INFO - (524, 'Ручка шариковая Hawk, желтый', 'алюминий')
+[2024-12-11T17:52:13.720+0000] {logging_mixin.py:151} INFO - (525, 'Ручка шариковая Ardea, зеленый', 'алюминий')
+[2024-12-11T17:52:13.720+0000] {logging_mixin.py:151} INFO - (533, 'Ручка-стилус шариковая Iris с несколькими стержнями', 'алюминий')
+[2024-12-11T17:52:13.721+0000] {logging_mixin.py:151} INFO - (534, 'Ручка-стилус шариковая Zoe, лайм', 'алюминий')
+[2024-12-11T17:52:13.721+0000] {logging_mixin.py:151} INFO - (577, 'Технический фонарик Polaris', 'алюминий')
+[2024-12-11T17:52:13.722+0000] {logging_mixin.py:151} INFO - (582, 'Фонарик с 8 светодиодами, черный', 'алюминий')
+[2024-12-11T17:52:13.722+0000] {logging_mixin.py:151} INFO - (896, 'Портативное зарядное устройство Jolt, 2200 mAh, черный', 'алюминий')
+[2024-12-11T17:52:13.724+0000] {logging_mixin.py:151} INFO - (946, 'Фонарик Omega с открывалкой для бутылок', 'алюминий')
+[2024-12-11T17:52:13.724+0000] {logging_mixin.py:151} INFO - (1141, 'Колонка Greedo с функцией Bluetooth®, черный', 'алюминий')
+[2024-12-11T17:52:13.725+0000] {logging_mixin.py:151} INFO - (1197, 'Портативное зарядное устройство Mega Volt, черный/белый', 'алюминий')
+[2024-12-11T17:52:13.726+0000] {logging_mixin.py:151} INFO - (1214, 'Фонарик Mars, черный', 'алюминий')
+[2024-12-11T17:52:13.726+0000] {logging_mixin.py:151} INFO - (1234, 'Шариковая ручка Oxford, черный/серебристый', 'алюминий')
+[2024-12-11T17:52:13.727+0000] {logging_mixin.py:151} INFO - (1608, 'Повербанк PB-10000 Type-C, серебристый', 'алюминий')
+[2024-12-11T17:52:13.727+0000] {logging_mixin.py:151} INFO - (1683, 'Визитница Shanghai', 'алюминий')
+[2024-12-11T17:52:13.728+0000] {logging_mixin.py:151} INFO - (1706, 'Мультиинструмент с фонариком Casper', 'алюминий')
+[2024-12-11T17:52:13.730+0000] {logging_mixin.py:151} INFO - (1714, 'Шариковая ручка Izmir', 'алюминий')
+[2024-12-11T17:52:13.730+0000] {logging_mixin.py:151} INFO - (1715, 'Шариковая ручка Jewel, черный/серебристый', 'алюминий')
+[2024-12-11T17:52:13.731+0000] {logging_mixin.py:151} INFO - (1717, 'Шариковая ручка Milas, серебристый', 'алюминий')
+[2024-12-11T17:52:13.731+0000] {logging_mixin.py:151} INFO - (1732, 'Брелок Barto, серебристый/черный', 'алюминий')
+[2024-12-11T17:52:13.732+0000] {logging_mixin.py:151} INFO - (1733, 'Брелок Donato, серебристый/черный', 'алюминий')
+[2024-12-11T17:52:13.733+0000] {logging_mixin.py:151} INFO - (1734, 'Брелок Alvaro, серебристый/черный', 'алюминий')
+[2024-12-11T17:52:13.733+0000] {logging_mixin.py:151} INFO - (1788, 'Мини фонарик с открывалкой', 'алюминий')
+[2024-12-11T17:52:13.734+0000] {logging_mixin.py:151} INFO - (1790, 'Многофункциональный инструмент Teron', 'алюминий')
+[2024-12-11T17:52:13.735+0000] {logging_mixin.py:151} INFO - (2331, 'Спортивная алюминиевая бутылка Grom, черный', 'алюминий')
+[2024-12-11T17:52:13.735+0000] {logging_mixin.py:151} INFO - (2349, 'Складной нож, черный', 'алюминий')
+[2024-12-11T17:52:13.736+0000] {logging_mixin.py:151} INFO - (2350, 'Компактный фонарь с лампой сбоку, черный', 'алюминий')
+[2024-12-11T17:52:13.737+0000] {logging_mixin.py:151} INFO - (2351, 'Телескопический фонарь с боковой лампой, черный', 'алюминий')
+[2024-12-11T17:52:13.737+0000] {logging_mixin.py:151} INFO - (2354, 'Нож Canyon с карабином, 5 функций, черный', 'алюминий')
+[2024-12-11T17:52:13.738+0000] {logging_mixin.py:151} INFO - (2355, 'Карманный ножик Ranger, черный', 'алюминий')
+[2024-12-11T17:52:13.738+0000] {logging_mixin.py:151} INFO - (2356, 'Многофункциональный инструмент Tycoon, 12 функций, черный/серый', 'алюминий')
+[2024-12-11T17:52:13.739+0000] {logging_mixin.py:151} INFO - (2357, 'Подарочный набор Ranger с фонариком и ножом, черный', 'алюминий')
+[2024-12-11T17:52:13.739+0000] {logging_mixin.py:151} INFO - (2367, 'Подарочный набор Scout с многофункциональным ножом и фонариком, черный', 'алюминий')
+[2024-12-11T17:52:13.740+0000] {logging_mixin.py:151} INFO - (2406, 'Металлические беспроводные наушники с чехлом пауэрбанк', 'алюминий')
+[2024-12-11T17:52:13.740+0000] {logging_mixin.py:151} INFO - (2469, 'Зарядное устройство Stellar емкостью 8000 mAh, черный', 'алюминий')
+[2024-12-11T17:52:13.741+0000] {logging_mixin.py:151} INFO - (2479, 'ЮСБ хаб с 4 портами и подставка для телефона, черный', 'алюминий')
+[2024-12-11T17:52:13.741+0000] {logging_mixin.py:151} INFO - (2491, 'Портативное зарядное устройство Pep 4000 mAh, черный', 'алюминий')
+[2024-12-11T17:52:13.742+0000] {logging_mixin.py:151} INFO - (2495, 'Поворотный магнитный держатель телефона Mount, серебристый', 'алюминий')
+[2024-12-11T17:52:13.742+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-12-11T17:52:13.767+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=souvenir_queries, task_id=query_souvenirs_by_material, execution_date=20241211T175212, start_date=20241211T175213, end_date=20241211T175213
+[2024-12-11T17:52:13.812+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-12-11T17:52:13.880+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
