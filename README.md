@@ -28,15 +28,7 @@ git clone https://github.com/PiorlZ/database_lr.git
 cd database_lr-main
 ```
 
-### 2. Build the Docker Image
-
-Use the `Dockerfile` to build the Docker image:
-
-```bash
-docker build -t database-lr-image .
-```
-
-### 3. Start the Services
+### 2. Start the Services
 
 Use Docker Compose to spin up the required containers:
 
@@ -44,7 +36,7 @@ Use Docker Compose to spin up the required containers:
 docker-compose up -d
 ```
 
-### 4. Install Dependencies
+### 3. Install Dependencies
 
 If you need to run the project locally, install the dependencies:
 
@@ -116,15 +108,7 @@ git clone https://github.com/PiorlZ/database_lr.git
 cd database_lr-main
 ```
 
-### 2. Постройте Docker-образ
-
-Используйте `Dockerfile` для создания Docker-образа:
-
-```bash
-docker build -t database-lr-image .
-```
-
-### 3. Запустите сервисы
+### 2. Запустите сервисы
 
 Используйте Docker Compose для запуска необходимых контейнеров:
 
@@ -132,7 +116,7 @@ docker build -t database-lr-image .
 docker-compose up -d
 ```
 
-### 4. Установите зависимости
+### 3. Установите зависимости
 
 Если вам нужно запустить проект локально, установите зависимости:
 
